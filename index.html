@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic-Tac Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Tic-Tac-Game</h1>
+    <div id="setup">
+      <div class="gameMode">
+        <label>Choose Game Mode:</label>
+        <label
+          ><input type="radio" name="mode" value="pvp" checked /> Player vs
+          Player</label
+        >
+        <label
+          ><input type="radio" name="mode" value="pvc" /> Player vs
+          Computer</label
+        >
+      </div>
+      <div id="difficultyContainer" style="display: none">
+        <label>Choose Difficulty:</label>
+        <br />
+        <label style="padding-bottom: 20px"
+          ><input type="radio" name="difficulty" value="easy" checked />
+          Easy</label
+        >
+        <br />
+        <label style="padding-bottom: 20px"
+          ><input type="radio" name="difficulty" value="hard" /> Hard</label
+        >
+        <br />
+        <label style="padding-bottom: 20px"
+          ><input type="radio" name="difficulty" value="pro" />
+          Professional</label
+        >
+        <br />
+        <br />
+      </div>
+      <button id="start">Start Game</button>
+    </div>
+    <div id="game" style="display: none">
+      <div id="scores">
+        <p>Player X: <span id="scoreX">0</span></p>
+        <p>Player O: <span id="scoreO">0</span></p>
+      </div>
+      <div class="board">
+        <div class="cell" data-index="0"></div>
+        <div class="cell" data-index="1"></div>
+        <div class="cell" data-index="2"></div>
+        <div class="cell" data-index="3"></div>
+        <div class="cell" data-index="4"></div>
+        <div class="cell" data-index="5"></div>
+        <div class="cell" data-index="6"></div>
+        <div class="cell" data-index="7"></div>
+        <div class="cell" data-index="8"></div>
+      </div>
+      <p id="turn">Player X's turn</p>
+      <p id="status"></p>
+      <button id="reset">Reset</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
